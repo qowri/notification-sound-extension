@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name": "K-Connect Notification Alert",
+    "version": "1.0",
+    "description": "Звуковое оповещение о новых уведомлениях на k-connect.ru",
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon16.png",
+            "32": "icon32.png"
+        }
+    },
+    "permissions": [
+        "storage",
+        "unlimitedStorage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://k-connect.ru/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "sound1.mp3",
+                "sound2.mp3",
+                "sound3.mp3",
+                "sound4.mp3",
+                "sound5.mp3",
+                "sound6.mp3",
+                "sound7.mp3",
+                "*.wav",
+                "*.ogg",
+                "*.m4a"
+            ],
+            "matches": [
+                "https://k-connect.ru/*"
+            ]
+        }
+    ]
+}

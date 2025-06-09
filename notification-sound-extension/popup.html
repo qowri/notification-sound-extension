@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>K-Connect Alert Settings</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #CEED44, #C59443);
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 18px;
+            margin-top: 0;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #CEED44, #C59443);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .test-btn {
+            background: #3498db;
+        }
+
+        .current-sound {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Настройки уведомлений</h1>
+        <div class="form-group">
+            <label for="sound-select">Стандартные звуки:</label>
+            <select id="sound-select">
+                <option value="sound1">Звук 1 (по умолчанию)</option>
+                <option value="sound2">Звук 2</option>
+                <option value="sound3">Звук 3</option>
+                <option value="sound4">Звук 4</option>
+                <option value="sound5">Звук 5</option>
+                <option value="sound6">Звук 6</option>
+                <option value="sound7">Звук 7</option>
+                <option value="custom">Пользовательский звук</option>
+            </select>
+        </div>
+        <div class="form-group" id="custom-sound-group" style="display: none;">
+            <label for="sound-upload">Загрузить свой звук:</label>
+            <input type="file" id="sound-upload" accept="audio/*,.mp3,.wav,.ogg,.m4a">
+        </div>
+        <button id="save-btn">Сохранить</button>
+        <button id="test-btn" class="test-btn">Тест звука</button>
+        <div class="current-sound" id="current-sound">
+            Текущий звук: Звук 1 (по умолчанию)
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
